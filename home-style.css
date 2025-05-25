@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure basic body styling doesn't interfere */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f8f8;
+    /* A light background for the body */
+    color: #333;
+}
+
+/* Home Section Layout */
+.home-section {
+    display: flex;
+    flex-direction: row;
+    /* Default: text left, image right */
+    align-items: center;
+    /* Vertically align content */
+    justify-content: center;
+    /* Center content horizontally */
+    padding: 4rem 5%;
+    /* Top/bottom padding, 5% left/right padding */
+    max-width: 1200px;
+    /* Max width for content */
+    margin: 3rem auto;
+    /* Center the section on the page, margin from header */
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    /* Soft shadow */
+    overflow: hidden;
+    /* Important for floating image */
+}
+
+/* Text Content Styling */
+.text-content {
+    flex: 1;
+    /* Allows text content to take available space */
+    padding-right: 3rem;
+    /* Space between text and image */
+    max-width: 600px;
+    /* Limit text width for readability */
+    text-align: left;
+}
+
+.text-content h1 {
+    font-size: 3.5rem;
+    color: #2193b0;
+    /* Matches header accent color */
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.text-content h2 {
+    font-size: 2.2rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.text-content p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* Call to Action Button */
+.call-to-action-btn {
+    background-color: #2193b0;
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    /* Pill shape */
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.call-to-action-btn:hover {
+    background-color: #17718a;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.call-to-action-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Image Container and Floating Image */
+.image-container {
+    flex: 0 0 auto;
+    /* Don't grow, don't shrink, size based on content */
+    width: 450px;
+    /* Set a base width for the image container */
+    max-width: 50%;
+    /* Max width relative to home-section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.floating-image {
+    max-width: 100%;
+    /* Ensures image scales within its container */
+    height: auto;
+    border-radius: 15px;
+    /* Rounded corners for the image */
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.15));
+    /* Shadow for depth */
+    animation: float 3s ease-in-out infinite;
+    /* Floating animation */
+}
+
+/* Floating Animation Keyframes */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    /* Moves up 15px */
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+/* --- Responsive Adjustments for Home Section --- */
+
+@media (max-width: 992px) {
+    .home-section {
+        flex-direction: column;
+        /* Stack content vertically on medium screens */
+        padding: 3rem 5%;
+        margin: 2rem auto;
+    }
+
+    .text-content {
+        padding-right: 0;
+        /* Remove right padding when stacked */
+        padding-bottom: 2rem;
+        /* Add space below text content */
+        text-align: center;
+        /* Center text when stacked */
+        max-width: 100%;
+        /* Allow text to take full width */
+    }
+
+    .text-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .text-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .text-content p {
+        font-size: 1rem;
+    }
+
+    .image-container {
+        width: 80%;
+        /* Larger image on stacked layout */
+        max-width: 400px;
+        /* Limit max size */
+    }
+}
+
+@media (max-width: 600px) {
+    .home-section {
+        padding: 2rem 5%;
+        margin: 1.5rem auto;
+        border-radius: 10px;
+    }
+
+    .text-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .text-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .text-content p {
+        font-size: 0.95rem;
+    }
+
+    .call-to-action-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .image-container {
+        width: 90%;
+        max-width: 300px;
+        /* Smaller image on mobile */
+    }
+
+    .floating-image {
+        border-radius: 10px;
+    }
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #eee;
+    color: #777;
+    font-size: 0.9rem;
+    margin-top: 3rem;
+}

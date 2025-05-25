@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic Resets for consistent styling across browsers */
+body {
+    margin: 0; /* Remove default body margin */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font globally */
+    background-color: #f8f8f8; /* Light background color for the page */
+}
+
+/* Main Header Styling */
+.main-header {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Distribute items (logo left, nav right) */
+    align-items: center; /* Vertically center items within the header */
+    padding: 1.5rem 2.5rem; /* Top/bottom padding 1.5rem, left/right padding 2.5rem */
+    
+    /* Gradient Background: A vibrant blue to cyan gradient */
+    background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%); 
+    color: #fff; /* White text color for header content */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    flex-wrap: wrap; /* Allows items to wrap onto the next line if necessary */
+    position: fixed; /* Make the header stick to the top of the viewport */
+    width: 100%; /* Ensure the fixed header spans the full width */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    z-index: 1000; /* Ensure header stays on top of other content */
+    animation: fadeInHeader 0.8s ease-out forwards; /* Apply fade-in animation */
+}
+
+/* Header Logo/Brand Styling */
+.header-logo h1 {
+    margin: 0; /* Remove default margin from h1 */
+    font-size: 2.2rem; /* Large font size for brand name */
+    font-weight: 700; /* Bold font weight */
+    letter-spacing: 1px; /* Slightly increased letter spacing */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+}
+
+/* Main Navigation Styling (Desktop) */
+.main-nav ul {
+    list-style: none; /* Remove bullet points from list */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use Flexbox for horizontal navigation links */
+    gap: 2rem; /* Space between navigation items */
+}
+
+.main-nav ul li a {
+    color: #fff; /* White color for links */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.1rem; /* Font size for navigation links */
+    font-weight: 600; /* Semi-bold font weight */
+    padding: 0.5rem 0; /* Padding for click area */
+    position: relative; /* For underline animation */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.main-nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0; /* Initially no width */
+    height: 2px;
+    background-color: #00f2fe; /* Accent color for underline */
+    transition: width 0.3s ease-out; /* Smooth width transition */
+}
+
+.main-nav ul li a:hover {
+    color: #e0f7fa; /* Lighter color on hover */
+}
+
+.main-nav ul li a:hover::after {
+    width: 100%; /* Expand underline on hover */
+}
+
+
+/* Hamburger Menu Icon (Hidden on Desktop) */
+.menu-toggle {
+    display: none; /* Hide the checkbox input */
+}
+
+.menu-icon {
+    display: none; /* Hidden by default, shown only on mobile */
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.menu-icon:hover {
+    transform: scale(1.1);
+}
+
+/* --- Responsive Adjustments using Media Queries --- */
+
+/* For screens up to 992px wide (e.g., tablets and smaller desktops) */
+@media (max-width: 992px) {
+    .main-header {
+        padding: 1.2rem 1.5rem; /* Adjusted padding */
+    }
+
+    .header-logo h1 {
+        font-size: 1.8rem; /* Smaller font size for brand name */
+    }
+
+    /* Hide desktop navigation */
+    .main-nav {
+        display: none; 
+        flex-direction: column; /* Stack links vertically */
+        width: 100%; /* Take full width */
+        background-color: #334a60; /* Dark background for mobile menu */
+        position: absolute; /* Position relative to header */
+        top: 100%; /* Below the header */
+        left: 0;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        animation: slideDown 0.4s ease-out forwards; /* Slide down animation */
+        opacity: 0; /* Hidden initially */
+        transform: translateY(-20px); /* Start slightly above */
+    }
+
+    .main-nav ul {
+        flex-direction: column; /* Stack list items */
+        gap: 0; /* Remove gap between stacked items */
+        padding: 1rem 0;
+    }
+
+    .main-nav ul li {
+        text-align: center; /* Center menu items */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator line */
+    }
+
+    .main-nav ul li:last-child {
+        border-bottom: none; /* No border on last item */
+    }
+
+    .main-nav ul li a {
+        padding: 1rem 0; /* Larger click area for mobile */
+        display: block; /* Make link fill list item */
+        font-size: 1.2rem; /* Larger font for mobile links */
+    }
+
+    .main-nav ul li a::after {
+        display: none; /* Hide underline on mobile */
+    }
+
+    /* Show hamburger icon */
+    .menu-icon {
+        display: block; /* Show the hamburger icon */
+    }
+
+    /* When menu-toggle checkbox is checked, show the navigation */
+    .menu-toggle:checked ~ .main-nav {
+        display: flex; /* Show the navigation */
+        opacity: 1; /* Fade in */
+        transform: translateY(0); /* Slide down to position */
+    }
+
+    /* Rotate hamburger icon when menu is open */
+    .menu-toggle:checked + .menu-icon .fa-bars {
+        transform: rotate(90deg); /* Rotate icon */
+    }
+}
+
+/* For screens up to 480px wide (e.g., mobile phones) */
+@media (max-width: 480px) {
+    .main-header {
+        padding: 1rem 1rem; /* Further reduced padding */
+    }
+
+    .header-logo h1 {
+        font-size: 1.6rem; /* Even smaller font size */
+    }
+
+    .menu-icon {
+        font-size: 1.6rem; /* Smaller hamburger icon */
+    }
+
+    .main-nav ul li a {
+        font-size: 1.1rem; /* Slightly smaller font for mobile links */
+    }
+}
+
+/* --- Animations --- */
+@keyframes fadeInHeader {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

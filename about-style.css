@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* About Section Styling */
+.about-section {
+    background-color: #fcfcfc;
+    /* A very light background */
+    padding: 6rem 5%;
+    /* Generous padding top/bottom, 5% horizontal */
+    text-align: center;
+    overflow: hidden;
+    /* Prevent content overflow issues */
+    position: relative;
+    /* For potential absolute positioning of elements */
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows columns to wrap on smaller screens */
+    align-items: center;
+    /* Vertically align items in the center */
+    justify-content: center;
+    /* Center the flex items */
+    max-width: 1200px;
+    /* Max width for content */
+    margin: 0 auto;
+    /* Center the container */
+    gap: 4rem;
+    /* Space between image and content */
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    /* Soft shadow */
+    padding: 3rem;
+    /* Inner padding for the container */
+}
+
+/* About Image Styling */
+.about-image {
+    flex: 1;
+    /* Allow image container to take available space */
+    min-width: 300px;
+    /* Minimum width before wrapping */
+    max-width: 500px;
+    /* Max width for the image */
+    position: relative;
+    /* For animations */
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    /* Image shadow */
+    transition: transform 0.3s ease-out;
+    /* For subtle hover effect */
+}
+
+.about-image img:hover {
+    transform: scale(1.02);
+    /* Slight zoom on hover */
+}
+
+/* About Content Styling */
+.about-content {
+    flex: 1;
+    /* Allow content to take available space */
+    min-width: 300px;
+    /* Minimum width before wrapping */
+    max-width: 600px;
+    /* Max width for text content */
+    text-align: left;
+}
+
+.about-content h2 {
+    font-size: 3.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.about-content h2 .highlight {
+    color: #2193b0;
+    /* Accent color matching header */
+}
+
+.about-content .tagline {
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 2rem;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.about-content p strong {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Key Points List */
+.key-points {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.key-points li {
+    display: flex;
+    align-items: center;
+    font-size: 1.05rem;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.key-points li i {
+    color: #2193b0;
+    /* Accent color for icons */
+    margin-right: 15px;
+    font-size: 1.3rem;
+}
+
+/* About Button */
+.about-btn {
+    background-color: #00f2fe;
+    /* Cyan accent for button */
+    color: #1f2f3f;
+    /* Dark text for button */
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-btn:hover {
+    background-color: #4facfe;
+    /* Blue on hover */
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .about-section {
+        padding: 4rem 3%;
+        /* Reduced padding */
+    }
+
+    .about-container {
+        flex-direction: column;
+        /* Stack image and content vertically */
+        padding: 2rem;
+        /* Adjusted inner padding */
+        gap: 2.5rem;
+        /* Reduced gap when stacked */
+    }
+
+    .about-image {
+        min-width: unset;
+        /* Remove min-width for flexibility */
+        width: 80%;
+        /* Take up more width */
+        max-width: 450px;
+        /* Limit max width */
+    }
+
+    .about-content {
+        min-width: unset;
+        width: 100%;
+        text-align: center;
+        /* Center content when stacked */
+    }
+
+    .about-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-content .tagline {
+        font-size: 1.1rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+
+    .key-points {
+        text-align: center;
+        /* Center key points list */
+        margin: 2rem auto;
+        /* Center list */
+        max-width: 400px;
+        /* Limit list width */
+    }
+
+    .key-points li {
+        justify-content: center;
+        /* Center list items horizontally */
+    }
+}
+
+@media (max-width: 600px) {
+    .about-section {
+        padding: 3rem 2%;
+    }
+
+    .about-container {
+        padding: 1.5rem;
+    }
+
+    .about-image {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .about-content h2 {
+        font-size: 2rem;
+    }
+
+    .about-content .tagline {
+        font-size: 1rem;
+    }
+
+    .about-content p {
+        font-size: 0.95rem;
+    }
+
+    .key-points li {
+        font-size: 0.9rem;
+    }
+
+    .about-btn {
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+/* --- Animations for About Section --- */
+
+/* Initial state for elements that will animate */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* State when the element is visible in the viewport */
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Site Footer Styling */
+.site-footer {
+    background: linear-gradient(135deg, #1f2f3f, #334a60);
+    /* Dark blue-grey gradient */
+    color: #f0f8ff;
+    /* Light text color */
+    padding: 3rem 5%;
+    /* Top/bottom padding, 5% left/right padding */
+    font-family: 'Poppins', sans-serif;
+    animation: fadeIn 1s ease-out forwards;
+    /* Simple fade-in animation for the footer */
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow columns to wrap on smaller screens */
+    justify-content: space-between;
+    /* Distribute columns evenly */
+    max-width: 1200px;
+    /* Limit footer content width */
+    margin: 0 auto;
+    /* Center the footer content */
+    gap: 2rem;
+    /* Space between columns */
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /* Subtle separator */
+}
+
+.footer-column {
+    flex: 1;
+    /* Allow columns to grow and shrink */
+    min-width: 250px;
+    /* Minimum width before wrapping */
+    padding: 0 1rem;
+}
+
+.footer-column h3 {
+    font-size: 1.4rem;
+    color: #00f2fe;
+    /* Cyan accent color */
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+/* Underline effect for headings */
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    /* Short underline */
+    height: 3px;
+    background-color: #00f2fe;
+    border-radius: 2px;
+}
+
+.footer-column p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+/* Footer Social Icons */
+.footer-social-icons {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social-icons a {
+    color: #f0f8ff;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social-icons a:hover {
+    color: #00f2fe;
+    transform: translateY(-3px) scale(1.1);
+}
+
+/* Quick Links */
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quick-links ul li {
+    margin-bottom: 0.8rem;
+}
+
+.quick-links ul li a {
+    color: #f0f8ff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    opacity: 0.8;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.quick-links ul li a:hover {
+    color: #00f2fe;
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* Contact Details */
+.contact-details p {
+    display: flex;
+    align-items: flex-start;
+    /* Align text to top if multiple lines */
+    margin-bottom: 1rem;
+}
+
+.contact-details p i {
+    margin-right: 10px;
+    font-size: 1.1rem;
+    color: #00f2fe;
+    flex-shrink: 0;
+    /* Prevent icon from shrinking */
+}
+
+/* Newsletter Form */
+.newsletter-form {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.newsletter-form input[type="email"] {
+    flex-grow: 1;
+    /* Allow input to take available space */
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 0.9rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #f0f8ff;
+}
+
+.newsletter-form input[type="email"]::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter-form input[type="email"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #00f2fe;
+}
+
+.newsletter-form button {
+    background-color: #00f2fe;
+    color: #1f2f3f;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+}
+
+.newsletter-form button:hover {
+    background-color: #4facfe;
+    /* Hover color for button */
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    font-size: 0.85rem;
+    opacity: 0.7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom a {
+    color: #f0f8ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #00f2fe;
+    text-decoration: underline;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .footer-container {
+        flex-direction: column;
+        /* Stack columns vertically */
+        align-items: center;
+        /* Center items */
+        gap: 3rem;
+        /* Increase gap between stacked columns */
+    }
+
+    .footer-column {
+        min-width: unset;
+        /* Remove min-width when stacked */
+        width: 80%;
+        /* Take up more width */
+        max-width: 500px;
+        /* Limit max width */
+        text-align: center;
+        /* Center text within columns */
+        padding: 0;
+        /* Remove horizontal padding */
+    }
+
+    .footer-column h3 {
+        text-align: center;
+        /* Center heading */
+        padding-bottom: 0.8rem;
+    }
+
+    .footer-column h3::after {
+        left: 50%;
+        /* Center the underline */
+        transform: translateX(-50%);
+    }
+
+    .footer-social-icons {
+        justify-content: center;
+        /* Center social icons */
+    }
+
+    .contact-details p {
+        justify-content: center;
+        /* Center contact info */
+    }
+
+    .newsletter-form {
+        max-width: 350px;
+        /* Limit newsletter form width */
+        margin: 1rem auto 0;
+        /* Center form */
+    }
+}
+
+@media (max-width: 600px) {
+    .site-footer {
+        padding: 2.5rem 3%;
+    }
+
+    .footer-column {
+        width: 95%;
+        /* Even wider on small screens */
+    }
+
+    .footer-column h3 {
+        font-size: 1.2rem;
+    }
+
+    .footer-column p,
+    .quick-links ul li a,
+    .contact-details p,
+    .newsletter-form input,
+    .newsletter-form button {
+        font-size: 0.85rem;
+    }
+
+    .footer-social-icons a {
+        font-size: 1.3rem;
+    }
+}
+
+
+/* --- Animations --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

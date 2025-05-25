@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+
+/* Services Section Styling */
+.services-section {
+    background-color: #eef7ff;
+    /* Light blue background */
+    padding: 6rem 5%;
+    /* Generous padding top/bottom, 5% horizontal */
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.services-header {
+    margin-bottom: 4rem;
+}
+
+.services-header h2 {
+    font-size: 3.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.services-header h2 .highlight {
+    color: #2193b0;
+    /* Accent color */
+}
+
+.services-header p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.services-container {
+    display: grid;
+    /* Use CSS Grid for a flexible and ordered layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Auto-fit 300px min-width cards */
+    gap: 2.5rem;
+    /* Space between grid items */
+    max-width: 1200px;
+    /* Limit container width */
+    margin: 0 auto;
+    /* Center the grid */
+}
+
+/* Service Card Styling */
+.service-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    /* Soft shadow */
+    padding: 2.5rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Push Learn More to bottom */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    /* Lift card on hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    /* Deeper shadow on hover */
+}
+
+.service-card .icon-wrapper {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, #2193b0, #6dd5ed);
+    /* Gradient icon background */
+    border-radius: 50%;
+    /* Circle shape */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.5rem;
+    /* Center and add bottom margin */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-card .icon-wrapper i {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.service-card h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    /* Allow description to take available space */
+}
+
+.service-card .learn-more-btn {
+    color: #2193b0;
+    /* Accent color for link */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-flex;
+    /* Allows icon and text to be on same line */
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.service-card .learn-more-btn i {
+    margin-left: 8px;
+    transition: margin-left 0.3s ease;
+}
+
+.service-card .learn-more-btn:hover {
+    color: #17718a;
+    /* Darker accent on hover */
+}
+
+.service-card .learn-more-btn:hover i {
+    margin-left: 12px;
+    /* Move arrow slightly on hover */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .services-section {
+        padding: 4rem 3%;
+    }
+
+    .services-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .services-header p {
+        font-size: 1rem;
+    }
+
+    .services-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        /* Adjust min width for tablets */
+        gap: 2rem;
+    }
+
+    .service-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.6rem;
+    }
+
+    .service-card p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .services-section {
+        padding: 3rem 2%;
+    }
+
+    .services-header h2 {
+        font-size: 2rem;
+    }
+
+    .services-header p {
+        font-size: 0.95rem;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+        /* Single column on very small screens */
+        gap: 1.5rem;
+    }
+
+    .service-card {
+        padding: 1.8rem 1.2rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .service-card p {
+        font-size: 0.9rem;
+    }
+
+    .service-card .icon-wrapper {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 1rem;
+    }
+
+    .service-card .icon-wrapper i {
+        font-size: 2rem;
+    }
+
+    .service-card .learn-more-btn {
+        font-size: 0.9rem;
+    }
+}
+
+/* --- Animations for Services Section --- */
+
+/* Initial state for elements that will animate */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* State when the element is visible in the viewport */
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}

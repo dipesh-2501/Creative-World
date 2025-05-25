@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Header with Navigation</title>
+    <link rel="stylesheet" href="header-style.css">
+    <link rel="stylesheet" href="home-style.css">
+    <link rel="stylesheet" href="about-style.css">
+    <link rel="stylesheet" href="services-style.css"> <link rel="stylesheet" href="course-slider-style.css">
+    <link rel="stylesheet" href="contact-style.css">
+    <link rel="stylesheet" href="footer-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-logo">
+            <h1>Your Brand</h1>
+        </div>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <i class="fas fa-bars"></i> </label>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home-section" id="home">
+        <div class="text-content">
+            <h1>Welcome to Our Creative World!</h1>
+            <h2>Where Ideas Come to Life.</h2>
+            <p>
+                Discover innovative solutions and inspiring designs that push boundaries.
+                We are dedicated to crafting unique experiences that resonate with our audience.
+                Explore our journey and see how we can transform your vision into reality.
+            </p>
+            <p>
+                From groundbreaking concepts to meticulous execution, our team is passionate
+                about delivering excellence. Join us and be a part of something extraordinary.
+            </p>
+            <button class="call-to-action-btn">Learn More</button>
+        </div>
+        <div class="image-container">
+            <img src="https://www.istudiotech.in/wp-content/uploads/2020/11/image_1.png" alt="Abstract creative concept" class="floating-image">
+        </div>
+    </main>
+
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <div class="about-image animate-on-scroll">
+                <img src="https://m.media-amazon.com/images/I/51EScspu++L._AC_UF1000,1000_QL80_.jpg" alt="Our dedicated team working together">
+            </div>
+            <div class="about-content animate-on-scroll">
+                <h2>About <span class="highlight">Your Brand</span></h2>
+                <p class="tagline">Innovating for a Brighter Future</p>
+                <p>
+                    At **Your Brand**, we believe in the power of **innovation** and **collaboration**.
+                    Founded in 2024, our mission has been to deliver cutting-edge solutions
+                    that empower individuals and businesses alike. We are driven by a passion
+                    for excellence and a commitment to making a positive impact in the world.
+                </p>
+                <p>
+                    Our team comprises dedicated experts from various fields, united by a shared vision
+                    to create, inspire, and grow. We pride ourselves on our agile approach,
+                    client-centric focus, and continuous pursuit of knowledge. Join us on this journey
+                    as we build the future, one brilliant idea at a time.
+                </p>
+                <ul class="key-points">
+                    <li><i class="fas fa-check-circle"></i> Dedicated to Innovation</li>
+                    <li><i class="fas fa-check-circle"></i> Expert Team & Collaboration</li>
+                    <li><i class="fas fa-check-circle"></i> Client-Centric Solutions</li>
+                    <li><i class="fas fa-check-circle"></i> Sustainable Growth</li>
+                </ul>
+                <button class="about-btn">Meet Our Team</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section" id="services">
+        <div class="services-header animate-on-scroll">
+            <h2>Our Core <span class="highlight">Services</span></h2>
+            <p>We offer a comprehensive range of services designed to meet your diverse needs.</p>
+        </div>
+        <div class="services-container">
+            <div class="service-card animate-on-scroll" style="animation-delay: 0.1s;">
+                <div class="icon-wrapper">
+                    <i class="fas fa-desktop"></i>
+                </div>
+                <h3>Web Development</h3>
+                <p>Crafting stunning, responsive, and high-performance websites tailored to your vision.</p>
+                <a href="#" class="learn-more-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card animate-on-scroll" style="animation-delay: 0.2s;">
+                <div class="icon-wrapper">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Mobile App Development</h3>
+                <p>Building intuitive and powerful mobile applications for iOS and Android platforms.</p>
+                <a href="#" class="learn-more-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card animate-on-scroll" style="animation-delay: 0.3s;">
+                <div class="icon-wrapper">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3>UI/UX Design</h3>
+                <p>Designing engaging user interfaces and seamless user experiences that delight.</p>
+                <a href="#" class="learn-more-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card animate-on-scroll" style="animation-delay: 0.4s;">
+                <div class="icon-wrapper">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Digital Marketing</h3>
+                <p>Driving online growth through effective SEO, SEM, social media, and content strategies.</p>
+                <a href="#" class="learn-more-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card animate-on-scroll" style="animation-delay: 0.5s;">
+                <div class="icon-wrapper">
+                    <i class="fas fa-cloud"></i>
+                </div>
+                <h3>Cloud Solutions</h3>
+                <p>Providing scalable and secure cloud infrastructure and managed services.</p>
+                <a href="#" class="learn-more-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card animate-on-scroll" style="animation-delay: 0.6s;">
+                <div class="icon-wrapper">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>24/7 Support</h3>
+                <p>Offering round-the-clock technical support to ensure your operations run smoothly.</p>
+                <a href="#" class="learn-more-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-slider-section" id="courses">
+        <div class="slider-header">
+            <h2>Our Popular Courses</h2>
+            <p>Explore a variety of courses designed to empower your learning journey.</p>
+        </div>
+        <div class="slider-container">
+            <div class="slider-track">
+                <div class="course-card">
+                    <img src="https://www.e-learningcentre.co.uk/wp-content/uploads/2024/10/web-development.png" alt="Web Development Course">
+                    <h3>Mastering Web Development</h3>
+                    <p>Learn HTML, CSS, JavaScript, and build dynamic websites from scratch.</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-star"></i> 4.9</span>
+                        <span><i class="fas fa-book-open"></i> 20 Lessons</span>
+                    </div>
+                    <button class="course-btn">Enroll Now</button>
+                </div>
+                <div class="course-card">
+                    <img src="https://vrgtechtraining.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-09-20-at-13.01.53_ed393421.jpg" alt="UI/UX Design Course">
+                    <h3>UI/UX Design Fundamentals</h3>
+                    <p>Create intuitive and beautiful user interfaces with industry best practices.</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-star"></i> 4.7</span>
+                        <span><i class="fas fa-palette"></i> 15 Projects</span>
+                    </div>
+                    <button class="course-btn">Enroll Now</button>
+                </div>
+                <div class="course-card">
+                    <img src="https://www.oxfordinstitute.in/img/data-science-course.jpg" alt="Data Science Course">
+                    <h3>Introduction to Data Science</h3>
+                    <p>Dive into data analysis, machine learning, and Python for data insights.</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-star"></i> 4.8</span>
+                        <span><i class="fas fa-chart-line"></i> 18 Modules</span>
+                    </div>
+                    <button class="course-btn">Enroll Now</button>
+                </div>
+                <div class="course-card">
+                    <img src="https://courses.iid.org.in/public//uploads/media_manager/628.jpg" alt="Digital Marketing Course">
+                    <h3>Digital Marketing Mastery</h3>
+                    <p>Master SEO, SEM, social media, and content marketing strategies.</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-star"></i> 4.6</span>
+                        <span><i class="fas fa-bullhorn"></i> 12 Topics</span>
+                    </div>
+                    <button class="course-btn">Enroll Now</button>
+                </div>
+                <div class="course-card">
+                    <img src="https://learning.oilab.in/public/img/mobile-app-development1.png" alt="Mobile App Development Course">
+                    <h3>Mobile App Development (React Native)</h3>
+                    <p>Build cross-platform mobile applications with React Native.</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-star"></i> 4.9</span>
+                        <span><i class="fas fa-mobile-alt"></i> 25 Hours</span>
+                    </div>
+                    <button class="course-btn">Enroll Now</button>
+                </div>
+                <div class="course-card">
+                    <img src="https://www.skillwaala.com/assets/img/cloud_computing.webp" alt="Cloud Computing Course">
+                    <h3>Cloud Computing Essentials</h3>
+                    <p>Understand the basics of cloud platforms and cloud deployment.</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-star"></i> 4.5</span>
+                        <span><i class="fas fa-cloud"></i> 10 Units</span>
+                    </div>
+                    <button class="course-btn">Enroll Now</button>
+                </div>
+
+                <div class="course-card">
+                    <img src="https://www.e-learningcentre.co.uk/wp-content/uploads/2024/10/web-development.png" alt="Web Development Course">
+                    <h3>Mastering Web Development</h3>
+                    <p>Learn HTML, CSS, JavaScript, and build dynamic websites from scratch.</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-star"></i> 4.9</span>
+                        <span><i class="fas fa-book-open"></i> 20 Lessons</span>
+                    </div>
+                    <button class="course-btn">Enroll Now</button>
+                </div>
+                <div class="course-card">
+                    <img src="https://vrgtechtraining.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-09-20-at-13.01.53_ed393421.jpg" alt="UI/UX Design Course">
+                    <h3>UI/UX Design Fundamentals</h3>
+                    <p>Create intuitive and beautiful user interfaces with industry best practices.</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-star"></i> 4.7</span>
+                        <span><i class="fas fa-palette"></i> 15 Projects</span>
+                    </div>
+                    <button class="course-btn">Enroll Now</button>
+                </div>
+                <div class="course-card">
+                    <img src="https://www.oxfordinstitute.in/img/data-science-course.jpg" alt="Data Science Course">
+                    <h3>Introduction to Data Science</h3>
+                    <p>Dive into data analysis, machine learning, and Python for data insights.</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-star"></i> 4.8</span>
+                        <span><i class="fas fa-chart-line"></i> 18 Modules</span>
+                    </div>
+                    <button class="course-btn">Enroll Now</button>
+                </div>
+                <div class="course-card">
+                    <img src="https://courses.iid.org.in/public//uploads/media_manager/628.jpg" alt="Digital Marketing Course">
+                    <h3>Digital Marketing Mastery</h3>
+                    <p>Master SEO, SEM, social media, and content marketing strategies.</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-star"></i> 4.6</span>
+                        <span><i class="fas fa-bullhorn"></i> 12 Topics</span>
+                    </div>
+                    <button class="course-btn">Enroll Now</button>
+                </div>
+                <div class="course-card">
+                    <img src="https://learning.oilab.in/public/img/mobile-app-development1.png" alt="Mobile App Development Course">
+                    <h3>Mobile App Development (React Native)</h3>
+                    <p>Build cross-platform mobile applications with React Native.</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-star"></i> 4.9</span>
+                        <span><i class="fas fa-mobile-alt"></i> 25 Hours</span>
+                    </div>
+                    <button class="course-btn">Enroll Now</button>
+                </div>
+                <div class="course-card">
+                    <img src="https://www.skillwaala.com/assets/img/cloud_computing.webp" alt="Cloud Computing Course">
+                    <h3>Cloud Computing Essentials</h3>
+                    <p>Understand the basics of cloud platforms and cloud deployment.</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-star"></i> 4.5</span>
+                        <span><i class="fas fa-cloud"></i> 10 Units</span>
+                    </div>
+                    <button class="course-btn">Enroll Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Get in Touch!</h2>
+                <p>We'd love to hear from you. Send us a message or find us using the details below.</p>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>123 Creative Lane, Innovation City, CA 90210</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+1 (555) 123-4567</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@yourbrand.com</span>
+                </div>
+                <div class="social-contact">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-form-wrapper">
+                <h3>Send Us a Message</h3>
+                <form class="contact-form">
+                    <div class="form-group animate-in">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group animate-in" style="animation-delay: 0.2s;">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group animate-in" style="animation-delay: 0.4s;">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+                    <div class="form-group animate-in" style="animation-delay: 0.6s;">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-contact-btn animate-in" style="animation-delay: 0.8s;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column about-us">
+                <h3>About Us</h3>
+                <p>We are a leading platform dedicated to providing high-quality online courses and fostering a vibrant learning community.</p>
+                <div class="footer-social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column contact-details">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Learning Ave, Knowledge City, 10001</p>
+                <p><i class="fas fa-phone"></i> +1 (234) 567-8900</p>
+                <p><i class="fas fa-envelope"></i> support@yourbrand.com</p>
+            </div>
+
+            <div class="footer-column newsletter">
+                <h3>Newsletter</h3>
+                <p>Stay updated with our latest courses and offers.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Brand. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for Contact Section
+        const contactSection = document.querySelector('.contact-section');
+        const contactObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.querySelectorAll('.animate-in').forEach(element => {
+                        element.classList.add('visible');
+                    });
+                    contactObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+        if (contactSection) {
+            contactObserver.observe(contactSection);
+        }
+
+        // Intersection Observer for About Section animations
+        const aboutSection = document.querySelector('.about-section');
+        const aboutObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.querySelectorAll('.animate-on-scroll').forEach(element => {
+                        element.classList.add('is-visible');
+                    });
+                    aboutObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+        if (aboutSection) {
+            aboutObserver.observe(aboutSection);
+        }
+
+        // Intersection Observer for Services Section animations
+        const servicesSection = document.querySelector('.services-section');
+        const servicesObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.querySelectorAll('.animate-on-scroll').forEach(element => {
+                        element.classList.add('is-visible');
+                    });
+                    servicesObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 }); // Slightly lower threshold for faster appearance
+        if (servicesSection) {
+            servicesObserver.observe(servicesSection);
+        }
+    </script>
+</body>
+</html>
